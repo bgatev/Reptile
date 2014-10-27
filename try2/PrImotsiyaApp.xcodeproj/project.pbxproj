@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		842C453119FEBEDD00BB96A1 /* ViewCreatePromoController.m in Sources */ = {isa = PBXBuildFile; fileRef = 842C453019FEBEDD00BB96A1 /* ViewCreatePromoController.m */; };
 		842C453319FEC0F400BB96A1 /* 17.1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 842C453219FEC0F400BB96A1 /* 17.1.jpg */; };
+		842C453919FEDBF100BB96A1 /* ViewSinglePromoController.m in Sources */ = {isa = PBXBuildFile; fileRef = 842C453819FEDBF100BB96A1 /* ViewSinglePromoController.m */; };
+		842C453C19FEDECE00BB96A1 /* ViewPromosFromCategoryController.m in Sources */ = {isa = PBXBuildFile; fileRef = 842C453B19FEDECD00BB96A1 /* ViewPromosFromCategoryController.m */; };
 		84A8DACD19FEA0770049CAC4 /* ViewPromosController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84A8DACC19FEA0770049CAC4 /* ViewPromosController.m */; };
 		84A9444A19FE314700FB0A27 /* ready.png in Resources */ = {isa = PBXBuildFile; fileRef = 84A9444919FE314700FB0A27 /* ready.png */; };
 		84A9444C19FE31B400FB0A27 /* gr.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 84A9444B19FE31B400FB0A27 /* gr.jpg */; };
@@ -54,6 +56,10 @@
 		842C452F19FEBEDD00BB96A1 /* ViewCreatePromoController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ViewCreatePromoController.h; path = ../ViewCreatePromoController.h; sourceTree = "<group>"; };
 		842C453019FEBEDD00BB96A1 /* ViewCreatePromoController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ViewCreatePromoController.m; path = ../ViewCreatePromoController.m; sourceTree = "<group>"; };
 		842C453219FEC0F400BB96A1 /* 17.1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 17.1.jpg; sourceTree = "<group>"; };
+		842C453719FEDBF100BB96A1 /* ViewSinglePromoController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ViewSinglePromoController.h; path = ../ViewSinglePromoController.h; sourceTree = "<group>"; };
+		842C453819FEDBF100BB96A1 /* ViewSinglePromoController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ViewSinglePromoController.m; path = ../ViewSinglePromoController.m; sourceTree = "<group>"; };
+		842C453A19FEDECD00BB96A1 /* ViewPromosFromCategoryController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ViewPromosFromCategoryController.h; path = ../ViewPromosFromCategoryController.h; sourceTree = "<group>"; };
+		842C453B19FEDECD00BB96A1 /* ViewPromosFromCategoryController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ViewPromosFromCategoryController.m; path = ../ViewPromosFromCategoryController.m; sourceTree = "<group>"; };
 		84A8DACB19FEA0770049CAC4 /* ViewPromosController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ViewPromosController.h; path = ../ViewPromosController.h; sourceTree = "<group>"; };
 		84A8DACC19FEA0770049CAC4 /* ViewPromosController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ViewPromosController.m; path = ../ViewPromosController.m; sourceTree = "<group>"; };
 		84A9444919FE314700FB0A27 /* ready.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ready.png; sourceTree = "<group>"; };
@@ -169,6 +175,10 @@
 				84A8DACC19FEA0770049CAC4 /* ViewPromosController.m */,
 				842C452F19FEBEDD00BB96A1 /* ViewCreatePromoController.h */,
 				842C453019FEBEDD00BB96A1 /* ViewCreatePromoController.m */,
+				842C453719FEDBF100BB96A1 /* ViewSinglePromoController.h */,
+				842C453819FEDBF100BB96A1 /* ViewSinglePromoController.m */,
+				842C453A19FEDECD00BB96A1 /* ViewPromosFromCategoryController.h */,
+				842C453B19FEDECD00BB96A1 /* ViewPromosFromCategoryController.m */,
 				84AA400219FD9D840076A526 /* Images.xcassets */,
 				84AA400419FD9D840076A526 /* LaunchScreen.xib */,
 				84AA3FFF19FD9D840076A526 /* Main.storyboard */,
@@ -326,11 +336,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				842C453919FEDBF100BB96A1 /* ViewSinglePromoController.m in Sources */,
 				842C453119FEBEDD00BB96A1 /* ViewCreatePromoController.m in Sources */,
 				84A8DACD19FEA0770049CAC4 /* ViewPromosController.m in Sources */,
 				84AA3FFE19FD9D840076A526 /* ViewController.m in Sources */,
 				84AA3FFB19FD9D840076A526 /* AppDelegate.m in Sources */,
 				84AA3FF819FD9D840076A526 /* main.m in Sources */,
+				842C453C19FEDECE00BB96A1 /* ViewPromosFromCategoryController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
