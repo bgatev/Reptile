@@ -30,16 +30,6 @@
                                     <segue destination="mmT-aY-ehB" kind="modal" id="xgS-vQ-Vb1"/>
                                 </connections>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" restorationIdentifier="grabPromosButton" image="ready3.png" translatesAutoresizingMaskIntoConstraints="NO" id="E8q-dK-CLT">
-                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
-                                <gestureRecognizers/>
-                                <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="-37" y="-89" width="396" height="540"/>
-                                </variation>
-                                <variation key="heightClass=compact-widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="-37" y="-79" width="396" height="540"/>
-                                </variation>
-                            </imageView>
                             <button opaque="NO" contentMode="scaleToFill" restorationIdentifier="addPromoButton" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" reversesTitleShadowWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oVI-tq-N3d">
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="22"/>
@@ -57,20 +47,30 @@
                                     <segue destination="dZn-nd-seR" kind="modal" id="wLU-gr-LrZ"/>
                                 </connections>
                             </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" restorationIdentifier="grabPromosButton" image="ready3.png" translatesAutoresizingMaskIntoConstraints="NO" id="E8q-dK-CLT">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                <gestureRecognizers/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="-37" y="-89" width="396" height="540"/>
+                                </variation>
+                                <variation key="heightClass=compact-widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="-37" y="-78" width="396" height="540"/>
+                                </variation>
+                            </imageView>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <variation key="default">
                             <mask key="subviews">
                                 <exclude reference="T2Y-vt-3o6"/>
-                                <exclude reference="E8q-dK-CLT"/>
                                 <exclude reference="oVI-tq-N3d"/>
+                                <exclude reference="E8q-dK-CLT"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
                             <mask key="subviews">
                                 <include reference="T2Y-vt-3o6"/>
-                                <include reference="E8q-dK-CLT"/>
                                 <include reference="oVI-tq-N3d"/>
+                                <include reference="E8q-dK-CLT"/>
                             </mask>
                         </variation>
                     </view>
@@ -89,6 +89,7 @@
                         <viewControllerLayoutGuide type="bottom" id="TrL-je-j1M"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="t0u-HE-bFL">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Swipe left to go back" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zB8-HU-zrG">
@@ -144,6 +145,9 @@
                                 <variation key="widthClass=compact" fixedFrame="YES">
                                     <rect key="frame" x="134" y="416" width="220" height="21"/>
                                 </variation>
+                                <variation key="heightClass=compact-widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="65" y="410" width="220" height="21"/>
+                                </variation>
                             </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -191,6 +195,7 @@
                         <viewControllerLayoutGuide type="bottom" id="nnL-wg-0nn"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="5Bu-ud-HyX">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Swipe right to go back" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9q0-eV-iKH">
@@ -200,6 +205,9 @@
                                 <nil key="highlightedColor"/>
                                 <variation key="widthClass=compact" fixedFrame="YES">
                                     <rect key="frame" x="7" y="503" width="255" height="39"/>
+                                </variation>
+                                <variation key="heightClass=compact-widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="10" y="533" width="255" height="39"/>
                                 </variation>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Long press to Add Picture" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CdN-dL-ufG">
@@ -270,6 +278,9 @@
                                 <variation key="widthClass=compact" fixedFrame="YES">
                                     <rect key="frame" x="34" y="190" width="52" height="21"/>
                                 </variation>
+                                <variation key="heightClass=compact-widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="35" y="190" width="52" height="21"/>
+                                </variation>
                             </label>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="addAddressInput" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Add shop address" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="B3O-NR-upa">
                                 <rect key="frame" x="0.0" y="-30" width="97" height="30"/>
@@ -305,16 +316,22 @@
                                 <variation key="widthClass=compact" fixedFrame="YES">
                                     <rect key="frame" x="7" y="540" width="196" height="21"/>
                                 </variation>
+                                <variation key="heightClass=compact-widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="7" y="580" width="196" height="21"/>
+                                </variation>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" restorationIdentifier="createButton" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jfw-Ew-ssm">
+                            <button opaque="NO" contentMode="scaleToFill" restorationIdentifier="createButton" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jfw-Ew-ssm">
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="32"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                 <state key="normal" title="Create" backgroundImage="9.jpg">
                                     <color key="titleColor" red="0.80000001192092896" green="1" blue="0.40000000596046448" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <variation key="widthClass=compact" fixedFrame="YES">
                                     <rect key="frame" x="30" y="454" width="195" height="46"/>
+                                </variation>
+                                <variation key="heightClass=compact-widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="89" y="469" width="197" height="44"/>
                                 </variation>
                             </button>
                         </subviews>
@@ -370,7 +387,7 @@
                 </swipeGestureRecognizer>
                 <pongPressGestureRecognizer allowableMovement="10" minimumPressDuration="0.5" id="cLn-3n-5JP"/>
             </objects>
-            <point key="canvasLocation" x="-468" y="-258"/>
+            <point key="canvasLocation" x="-468.75" y="-258.75"/>
         </scene>
         <!--Promos from category-->
         <scene sceneID="VJH-iF-ye6">
@@ -381,6 +398,7 @@
                         <viewControllerLayoutGuide type="bottom" id="0KP-RE-N5k"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="xQ4-6v-wQN">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DxH-QS-8rl">
@@ -462,6 +480,7 @@
                         <viewControllerLayoutGuide type="bottom" id="vCr-lV-ajZ"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="MKp-dB-f0B">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tap double given address  to" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Otd-FQ-hBm">
@@ -614,6 +633,9 @@
                                 <variation key="widthClass=compact" fixedFrame="YES">
                                     <rect key="frame" x="11" y="299" width="240" height="128"/>
                                 </variation>
+                                <variation key="heightClass=compact-widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="0.0" y="0.0" width="0.0" height="0.0"/>
+                                </variation>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pinch screen to see" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OUM-0o-4tt">
                                 <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
@@ -705,8 +727,8 @@
         <image name="ready3.png" width="700" height="789"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="hsF-Qb-w4F"/>
-        <segue reference="8Ia-la-7xs"/>
-        <segue reference="OcA-aL-a2u"/>
+        <segue reference="DvD-hG-rPc"/>
+        <segue reference="xgS-vQ-Vb1"/>
+        <segue reference="xvo-km-53U"/>
     </inferredMetricsTieBreakers>
 </document>
