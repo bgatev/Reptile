@@ -10,6 +10,9 @@
 
 @interface ViewController : UIViewController
 
+- (IBAction)swipeBackLeft:(UIStoryboardSegue *)segue;
+
+- (IBAction)swipeBackRight:(UIStoryboardSegue *)otherSegue;
 
 @end
 

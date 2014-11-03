@@ -28,4 +28,14 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (IBAction)swipeBackLeft:(UIStoryboardSegue *)segue {
+    
+   
+}
+
+- (IBAction)swipeBackRight:(UIStoryboardSegue *)otherSegue {
+    
+  
+}
+
 @end

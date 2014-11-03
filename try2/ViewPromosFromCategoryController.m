@@ -26,6 +26,13 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (IBAction)swipeBackLeftToPromosFromCategory:(UIStoryboardSegue *)segue {
+   
+}
+
+
+
+
 /*
 #pragma mark - Navigation
 

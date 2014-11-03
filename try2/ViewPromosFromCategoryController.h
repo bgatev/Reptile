@@ -10,4 +10,6 @@
 
 @interface ViewPromosFromCategoryController : UIViewController
 
+- (IBAction)swipeBackLeftToPromosFromCategory:(UIStoryboardSegue *)segue;
+
 @end

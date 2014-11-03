@@ -16,9 +16,6 @@
                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="Am6-kc-u98">
-                    <rect key="frame" x="165" y="321" width="20" height="20"/>
-                </activityIndicatorView>
                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="ready3.png" translatesAutoresizingMaskIntoConstraints="NO" id="AWq-cM-9yf">
                     <rect key="frame" x="8" y="-7" width="302" height="375"/>
                 </imageView>

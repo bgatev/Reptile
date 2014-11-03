@@ -78,7 +78,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1121.25" y="-229.5"/>
+            <point key="canvasLocation" x="-1170.75" y="-361.5"/>
         </scene>
         <!--ViewPromos-->
         <scene sceneID="4Ux-ii-64s">
@@ -92,15 +92,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Swipe left to go back" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zB8-HU-zrG">
-                                <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.50196081399917603" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                                <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="19" y="456" width="295" height="136"/>
-                                </variation>
-                            </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NVG-dr-7c2">
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
                                 <state key="normal" title="(delete when implement the gesture)">
@@ -110,7 +101,7 @@
                                     <rect key="frame" x="-14" y="445" width="344" height="30"/>
                                 </variation>
                                 <connections>
-                                    <segue destination="UT2-Ka-tiN" kind="modal" id="DvD-hG-rPc"/>
+                                    <segue destination="UT2-Ka-tiN" kind="modal" modalTransitionStyle="crossDissolve" id="DvD-hG-rPc"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Shake to show Promos " lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4Uz-xC-98E">
@@ -143,10 +134,22 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.50196081399917603" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                                 <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="134" y="416" width="220" height="21"/>
+                                    <rect key="frame" x="68" y="416" width="220" height="21"/>
                                 </variation>
                                 <variation key="heightClass=compact-widthClass=compact" fixedFrame="YES">
                                     <rect key="frame" x="65" y="410" width="220" height="21"/>
+                                </variation>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Swipe up to go back" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zB8-HU-zrG">
+                                <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.50196081399917603" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="19" y="456" width="295" height="136"/>
+                                </variation>
+                                <variation key="heightClass=compact-widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="51" y="455" width="295" height="136"/>
                                 </variation>
                             </label>
                         </subviews>
@@ -154,37 +157,39 @@
                         <gestureRecognizers/>
                         <variation key="default">
                             <mask key="subviews">
-                                <exclude reference="zB8-HU-zrG"/>
                                 <exclude reference="NVG-dr-7c2"/>
                                 <exclude reference="4Uz-xC-98E"/>
                                 <exclude reference="OyQ-J3-amH"/>
                                 <exclude reference="gVd-Mm-2BH"/>
                                 <exclude reference="zeQ-fT-cl5"/>
+                                <exclude reference="zB8-HU-zrG"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
                             <mask key="subviews">
-                                <include reference="zB8-HU-zrG"/>
                                 <include reference="NVG-dr-7c2"/>
                                 <include reference="4Uz-xC-98E"/>
                                 <include reference="OyQ-J3-amH"/>
                                 <include reference="gVd-Mm-2BH"/>
                                 <include reference="zeQ-fT-cl5"/>
+                                <include reference="zB8-HU-zrG"/>
                             </mask>
                         </variation>
                         <connections>
-                            <outletCollection property="gestureRecognizers" destination="BGw-Cw-015" appends="YES" id="0qJ-Q9-VHH"/>
+                            <outletCollection property="gestureRecognizers" destination="a5k-es-L1v" appends="YES" id="HAG-IQ-WED"/>
                         </connections>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2Gv-sY-UCb" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <swipeGestureRecognizer direction="left" id="BGw-Cw-015">
+                <exit id="Z6V-FA-Cht" userLabel="Exit" sceneMemberID="exit"/>
+                <swipeGestureRecognizer direction="up" id="a5k-es-L1v">
                     <connections>
-                        <segue destination="vXZ-lx-hvc" kind="modal" id="xvo-km-53U"/>
+                        <action selector="swipeBackLeft:" destination="mmT-aY-ehB" id="2fg-5t-JQA"/>
+                        <segue destination="Z6V-FA-Cht" kind="unwind" unwindAction="swipeBackLeft:" id="VRB-ZC-9QF"/>
                     </connections>
                 </swipeGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="-1776" y="-258"/>
+            <point key="canvasLocation" x="-1877.25" y="-360.75"/>
         </scene>
         <!--Add Promo-->
         <scene sceneID="eIP-km-Y7L">
@@ -198,18 +203,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Swipe right to go back" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9q0-eV-iKH">
-                                <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.50196081399917603" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                                <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="7" y="503" width="255" height="39"/>
-                                </variation>
-                                <variation key="heightClass=compact-widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="10" y="533" width="255" height="39"/>
-                                </variation>
-                            </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Long press to Add Picture" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CdN-dL-ufG">
                                 <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="21"/>
@@ -334,12 +327,23 @@
                                     <rect key="frame" x="89" y="469" width="197" height="44"/>
                                 </variation>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Swipe up to go back" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9q0-eV-iKH">
+                                <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.50196081399917603" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="7" y="503" width="255" height="39"/>
+                                </variation>
+                                <variation key="heightClass=compact-widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="10" y="533" width="255" height="39"/>
+                                </variation>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <gestureRecognizers/>
                         <variation key="default">
                             <mask key="subviews">
-                                <exclude reference="9q0-eV-iKH"/>
                                 <exclude reference="CdN-dL-ufG"/>
                                 <exclude reference="zXo-yD-9gf"/>
                                 <exclude reference="Hdo-04-rIE"/>
@@ -353,11 +357,11 @@
                                 <exclude reference="GYm-Az-1er"/>
                                 <exclude reference="bbE-DT-x25"/>
                                 <exclude reference="Jfw-Ew-ssm"/>
+                                <exclude reference="9q0-eV-iKH"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
                             <mask key="subviews">
-                                <include reference="9q0-eV-iKH"/>
                                 <include reference="CdN-dL-ufG"/>
                                 <include reference="zXo-yD-9gf"/>
                                 <include reference="Hdo-04-rIE"/>
@@ -371,6 +375,7 @@
                                 <include reference="GYm-Az-1er"/>
                                 <include reference="bbE-DT-x25"/>
                                 <include reference="Jfw-Ew-ssm"/>
+                                <include reference="9q0-eV-iKH"/>
                             </mask>
                         </variation>
                         <connections>
@@ -380,14 +385,15 @@
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VfR-iG-ymA" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <swipeGestureRecognizer direction="right" id="Aue-hS-ic5">
+                <exit id="jrt-XJ-wFL" userLabel="Exit" sceneMemberID="exit"/>
+                <swipeGestureRecognizer direction="up" id="Aue-hS-ic5">
                     <connections>
-                        <segue destination="vXZ-lx-hvc" kind="modal" id="IYh-Qg-9T2"/>
+                        <segue destination="jrt-XJ-wFL" kind="unwind" unwindAction="swipeBackRight:" id="ejE-RQ-Iz4"/>
                     </connections>
                 </swipeGestureRecognizer>
                 <pongPressGestureRecognizer allowableMovement="10" minimumPressDuration="0.5" id="cLn-3n-5JP"/>
             </objects>
-            <point key="canvasLocation" x="-468.75" y="-258.75"/>
+            <point key="canvasLocation" x="-462.75" y="-361.5"/>
         </scene>
         <!--Promos from category-->
         <scene sceneID="VJH-iF-ye6">
@@ -398,9 +404,33 @@
                         <viewControllerLayoutGuide type="bottom" id="0KP-RE-N5k"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="xQ4-6v-wQN">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Promos from the category" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="e2D-y0-mgw">
+                                <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="23"/>
+                                <color key="textColor" red="0.0" green="0.25098040699958801" blue="0.50196081399917603" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="-5" y="44" width="305" height="21"/>
+                                </variation>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Swipe up to go back" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CjJ-12-IuO">
+                                <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="66" y="504" width="159" height="21"/>
+                                </variation>
+                            </label>
+                            <pickerView contentMode="scaleToFill" restorationIdentifier="chosenPromo" translatesAutoresizingMaskIntoConstraints="NO" id="UXR-x1-JPu">
+                                <rect key="frame" x="0.0" y="-162" width="320" height="162"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="-53" y="184" width="400" height="162"/>
+                                </variation>
+                            </pickerView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DxH-QS-8rl">
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
@@ -414,47 +444,23 @@
                                     <segue destination="eHx-yF-yry" kind="modal" id="LP0-xc-Za1"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Promos from the category" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="e2D-y0-mgw">
-                                <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="23"/>
-                                <color key="textColor" red="0.0" green="0.25098040699958801" blue="0.50196081399917603" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                                <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="-5" y="44" width="305" height="21"/>
-                                </variation>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Swipe left to go back" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CjJ-12-IuO">
-                                <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                                <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="66" y="504" width="163" height="21"/>
-                                </variation>
-                            </label>
-                            <pickerView contentMode="scaleToFill" restorationIdentifier="chosenPromo" translatesAutoresizingMaskIntoConstraints="NO" id="UXR-x1-JPu">
-                                <rect key="frame" x="0.0" y="-162" width="320" height="162"/>
-                                <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="-53" y="184" width="400" height="162"/>
-                                </variation>
-                            </pickerView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <gestureRecognizers/>
                         <variation key="default">
                             <mask key="subviews">
-                                <exclude reference="DxH-QS-8rl"/>
                                 <exclude reference="e2D-y0-mgw"/>
                                 <exclude reference="CjJ-12-IuO"/>
                                 <exclude reference="UXR-x1-JPu"/>
+                                <exclude reference="DxH-QS-8rl"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
                             <mask key="subviews">
-                                <include reference="DxH-QS-8rl"/>
                                 <include reference="e2D-y0-mgw"/>
                                 <include reference="CjJ-12-IuO"/>
                                 <include reference="UXR-x1-JPu"/>
+                                <include reference="DxH-QS-8rl"/>
                             </mask>
                         </variation>
                         <connections>
@@ -463,13 +469,14 @@
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eLw-EJ-XjB" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <swipeGestureRecognizer direction="left" id="lnU-Xk-o4d">
+                <exit id="cZN-kj-Jy7" userLabel="Exit" sceneMemberID="exit"/>
+                <swipeGestureRecognizer direction="up" id="lnU-Xk-o4d">
                     <connections>
-                        <segue destination="mmT-aY-ehB" kind="modal" id="OcA-aL-a2u"/>
+                        <segue destination="cZN-kj-Jy7" kind="unwind" unwindAction="swipeBackLeftFromCategory:" id="kPC-C4-rdM"/>
                     </connections>
                 </swipeGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="-2563.5" y="-258"/>
+            <point key="canvasLocation" x="-2579.25" y="-361.5"/>
         </scene>
         <!--Single Promo-->
         <scene sceneID="gRJ-r4-zJN">
@@ -480,7 +487,7 @@
                         <viewControllerLayoutGuide type="bottom" id="vCr-lV-ajZ"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="MKp-dB-f0B">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tap double given address  to" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Otd-FQ-hBm">
@@ -489,7 +496,7 @@
                                 <color key="textColor" red="0.0" green="0.25098040699958801" blue="0.50196081399917603" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                                 <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="23" y="451" width="216" height="21"/>
+                                    <rect key="frame" x="42" y="445" width="216" height="21"/>
                                 </variation>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="see shop coordinates" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zIu-zU-6yf">
@@ -610,7 +617,7 @@
                                     <rect key="frame" x="0.0" y="0.0" width="0.0" height="0.0"/>
                                 </variation>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Swipe left to go back" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="p1y-b1-7gg">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Swipe up to go back" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="p1y-b1-7gg">
                                 <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                 <color key="textColor" red="0.0" green="0.25098040699958801" blue="0.50196081399917603" alpha="1" colorSpace="calibratedRGB"/>
@@ -619,19 +626,10 @@
                                     <rect key="frame" x="23" y="514" width="163" height="21"/>
                                 </variation>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="and right to go to main" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qLq-vT-7BX">
-                                <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                <color key="textColor" red="0.0" green="0.25098040699958801" blue="0.50196081399917603" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                                <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="37" y="543" width="175" height="21"/>
-                                </variation>
-                            </label>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" restorationIdentifier="pictureOfStock" translatesAutoresizingMaskIntoConstraints="NO" id="R8N-U3-Zcc">
                                 <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                                 <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="11" y="299" width="240" height="128"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="0.0" height="0.0"/>
                                 </variation>
                                 <variation key="heightClass=compact-widthClass=compact" fixedFrame="YES">
                                     <rect key="frame" x="0.0" y="0.0" width="0.0" height="0.0"/>
@@ -644,6 +642,15 @@
                                 <nil key="highlightedColor"/>
                                 <variation key="widthClass=compact" fixedFrame="YES">
                                     <rect key="frame" x="23" y="371" width="252" height="30"/>
+                                </variation>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="and down to go to main" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qLq-vT-7BX">
+                                <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <color key="textColor" red="0.0" green="0.25098040699958801" blue="0.50196081399917603" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="37" y="543" width="175" height="21"/>
                                 </variation>
                             </label>
                         </subviews>
@@ -666,9 +673,9 @@
                                 <exclude reference="Jgu-Mn-NYe"/>
                                 <exclude reference="8iu-TD-72C"/>
                                 <exclude reference="p1y-b1-7gg"/>
-                                <exclude reference="qLq-vT-7BX"/>
                                 <exclude reference="R8N-U3-Zcc"/>
                                 <exclude reference="OUM-0o-4tt"/>
+                                <exclude reference="qLq-vT-7BX"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
@@ -688,9 +695,9 @@
                                 <include reference="Jgu-Mn-NYe"/>
                                 <include reference="8iu-TD-72C"/>
                                 <include reference="p1y-b1-7gg"/>
-                                <include reference="qLq-vT-7BX"/>
                                 <include reference="R8N-U3-Zcc"/>
                                 <include reference="OUM-0o-4tt"/>
+                                <include reference="qLq-vT-7BX"/>
                             </mask>
                         </variation>
                         <connections>
@@ -701,24 +708,25 @@
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VtO-H1-IIM" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="bsX-MC-aa4" userLabel="Exit" sceneMemberID="exit"/>
                 <pinchGestureRecognizer id="mGl-BQ-jfI">
                     <connections>
                         <outlet property="delegate" destination="8iu-TD-72C" id="hQG-xC-d3Z"/>
                     </connections>
                 </pinchGestureRecognizer>
-                <swipeGestureRecognizer direction="left" id="BvM-Z1-USS">
+                <swipeGestureRecognizer direction="up" id="BvM-Z1-USS">
                     <connections>
-                        <segue destination="UT2-Ka-tiN" kind="modal" id="8Ia-la-7xs"/>
+                        <segue destination="bsX-MC-aa4" kind="unwind" unwindAction="swipeBackLeftToPromosFromCategory:" id="lbV-4m-XA0"/>
                     </connections>
                 </swipeGestureRecognizer>
                 <tapGestureRecognizer id="OME-I4-TmP"/>
-                <swipeGestureRecognizer direction="right" id="zN6-UG-NFK">
+                <swipeGestureRecognizer direction="down" id="zN6-UG-NFK">
                     <connections>
                         <segue destination="vXZ-lx-hvc" kind="modal" id="hsF-Qb-w4F"/>
                     </connections>
                 </swipeGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="-3324" y="-253"/>
+            <point key="canvasLocation" x="-3291.75" y="-361.5"/>
         </scene>
     </scenes>
     <resources>
@@ -726,9 +734,4 @@
         <image name="9.jpg" width="640" height="1136"/>
         <image name="ready3.png" width="700" height="789"/>
     </resources>
-    <inferredMetricsTieBreakers>
-        <segue reference="DvD-hG-rPc"/>
-        <segue reference="xgS-vQ-Vb1"/>
-        <segue reference="xvo-km-53U"/>
-    </inferredMetricsTieBreakers>
 </document>

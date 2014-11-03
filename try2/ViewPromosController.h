@@ -9,5 +9,7 @@
 #import <UIKit/UIKit.h>
 
 @interface ViewPromosController : UIViewController
+- (IBAction)swipeBackLeftFromCategory:(UIStoryboardSegue *)segue;
+
 
 @end
