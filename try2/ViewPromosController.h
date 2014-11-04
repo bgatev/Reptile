@@ -8,8 +8,9 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewPromosController : UIViewController
+@interface ViewPromosController : UIViewController<UIPickerViewDataSource, UIPickerViewDelegate>
 - (IBAction)swipeBackLeftFromCategory:(UIStoryboardSegue *)segue;
 
+@property (weak, nonatomic) IBOutlet UIPickerView *pickerCategories;
 
 @end

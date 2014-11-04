@@ -5,8 +5,9 @@
 //  Created by admin on 10/26/14.
 //  Copyright (c) 2014 admin. All rights reserved.
 //
-
+#import <Parse/Parse.h>
 #import "AppDelegate.h"
+
 
 @interface AppDelegate ()
 
@@ -17,6 +18,11 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    [Parse setApplicationId:@"5z3CuJA6ymo6Vnz7tOLzXVhiVpa9b7Boq8keDPa5"
+                  clientKey:@"QaF2ATJDO2d8vtDR9h021zS0SkRDyTC6NBPBvwgf"];
+    
+    [PFAnalytics trackAppOpenedWithLaunchOptions:launchOptions];
+    
     return YES;
 }
 
@@ -41,5 +47,7 @@
 - (void)applicationWillTerminate:(UIApplication *)application {
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
 }
+
+
 
 @end
