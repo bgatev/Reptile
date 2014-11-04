@@ -7,14 +7,18 @@
 //
 
 #import "ViewPromosController.h"
+#import <Parse/Parse.h>
+#import "ViewPromosFromCategoryController.h"
 
 @interface ViewPromosController ()
 {
      NSArray *_pickerCategoriesData;
+    NSArray *allPromos;
 	}
 @end
 
 @implementation ViewPromosController
+
 
 - (void)viewDidLoad {
       self.view.backgroundColor=[UIColor colorWithPatternImage:[UIImage imageNamed:@"13.3.jpg"]];
@@ -29,7 +33,7 @@
     self.pickerCategories.dataSource = self;
     self.pickerCategories.delegate = self;
     
-      
+    
 }
 
 - (void)didReceiveMemoryWarning {
@@ -70,5 +74,44 @@
   
 }
 
+- (IBAction)showAllFromCategory:(id)sender {
+    
+      NSString *strPrintRepeat;
+      NSInteger row;
+    
+    
+    row = [_pickerCategories selectedRowInComponent:0];
+    self.strPrintRepeat = [_pickerCategoriesData objectAtIndex:row];
+     NSString *category = self.strPrintRepeat;
+//    NSLog(category);
+    
+    PFQuery *query = [PFQuery queryWithClassName:@"Promotion"];
+    [query whereKey:@"Category" equalTo:category];
+    [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
+        if (!error) {
+            // The find succeeded.
+            NSLog(@"Successfully retrieved %d scores.", objects.count);
+            
+            allPromos = objects;
+            
+            UIStoryboard * sb = [UIStoryboard storyboardWithName:@"Main" bundle:[NSBundle mainBundle]];
+            ViewPromosFromCategoryController *pfc = [sb instantiateViewControllerWithIdentifier:@"PromosFromCategoryNib"];
+            pfc.promosFromTheCategory = [[NSArray alloc] init];
+            pfc.promosFromTheCategory = objects;
+            [self presentViewController:pfc animated:YES completion:nil];
+            
+            // Do something with the found objects
+//            for (PFObject *object in allPromos) {
+//                NSLog(@"%@", object[@"Name"]);
+//            }
+        } else {
+            // Log details of the failure
+            NSLog(@"Error: %@ %@", error, [error userInfo]);
+        }
+    }];
+    
+    
+    
+}
 
 @end

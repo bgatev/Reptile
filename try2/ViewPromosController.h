@@ -13,4 +13,8 @@
 
 @property (weak, nonatomic) IBOutlet UIPickerView *pickerCategories;
 
+@property (weak, nonatomic) NSString* strPrintRepeat;
+
+- (IBAction)showAllFromCategory:(id)sender;
+
 @end

@@ -60,10 +60,10 @@
 
 
 - (IBAction)createPromo:(id)sender{
-    NSString *strPrintRepeat;
+   // NSString *strPrintRepeat;
     NSInteger row;
-    NSArray *repeatPickerData;
-    UIPickerView *repeatPickerView;
+  //  NSArray *repeatPickerData;
+   // UIPickerView *repeatPickerView;
     
     row = [_picker selectedRowInComponent:0];
     self.strPrintRepeat = [_pickerData objectAtIndex:row];

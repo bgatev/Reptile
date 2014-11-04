@@ -7,7 +7,7 @@
         <!--MainView-->
         <scene sceneID="ufC-wZ-h7g">
             <objects>
-                <viewController restorationIdentifier="mainView" title="MainView" id="vXZ-lx-hvc" customClass="ViewController" sceneMemberID="viewController">
+                <viewController restorationIdentifier="mainView" storyboardIdentifier="ViewPromosControllerNib" title="MainView" id="vXZ-lx-hvc" customClass="ViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
                         <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
@@ -100,10 +100,10 @@
                                     <color key="titleShadowColor" red="0.25098040699958801" green="0.50196081399917603" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="16" y="398" width="241" height="40"/>
+                                    <rect key="frame" x="16" y="399" width="241" height="40"/>
                                 </variation>
                                 <connections>
-                                    <segue destination="UT2-Ka-tiN" kind="modal" modalTransitionStyle="crossDissolve" id="DvD-hG-rPc"/>
+                                    <action selector="showAllFromCategory:" destination="mmT-aY-ehB" eventType="touchUpInside" id="GkS-L9-YR2"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Shake to show Promos " lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4Uz-xC-98E">
@@ -115,12 +115,6 @@
                                     <rect key="frame" x="19" y="328" width="227" height="21"/>
                                 </variation>
                             </label>
-                            <pickerView contentMode="scaleToFill" restorationIdentifier="chosenCategory" translatesAutoresizingMaskIntoConstraints="NO" id="OyQ-J3-amH">
-                                <rect key="frame" x="0.0" y="-162" width="320" height="162"/>
-                                <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="-65" y="111" width="394" height="180"/>
-                                </variation>
-                            </pickerView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Choose category:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gVd-Mm-2BH">
                                 <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="28"/>
@@ -142,17 +136,6 @@
                                     <rect key="frame" x="65" y="410" width="220" height="21"/>
                                 </variation>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="t0h-cD-AT0">
-                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="21"/>
-                                <state key="normal" title="Show only my promos" backgroundImage="9.jpg">
-                                    <color key="titleColor" red="1" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                    <color key="titleShadowColor" red="0.0" green="0.50196081399917603" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                </state>
-                                <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="16" y="456" width="241" height="40"/>
-                                </variation>
-                            </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Swipe up to go back" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zB8-HU-zrG">
                                 <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -165,6 +148,23 @@
                                     <rect key="frame" x="51" y="455" width="295" height="136"/>
                                 </variation>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="t0h-cD-AT0">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                                <state key="normal" title="Show only my promos" backgroundImage="9.jpg">
+                                    <color key="titleColor" red="1" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" red="0.0" green="0.50196081399917603" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="16" y="456" width="241" height="40"/>
+                                </variation>
+                            </button>
+                            <pickerView contentMode="scaleToFill" restorationIdentifier="chosenCategory" translatesAutoresizingMaskIntoConstraints="NO" id="OyQ-J3-amH">
+                                <rect key="frame" x="0.0" y="-162" width="320" height="162"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="-65" y="111" width="394" height="180"/>
+                                </variation>
+                            </pickerView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <gestureRecognizers/>
@@ -172,22 +172,22 @@
                             <mask key="subviews">
                                 <exclude reference="NVG-dr-7c2"/>
                                 <exclude reference="4Uz-xC-98E"/>
-                                <exclude reference="OyQ-J3-amH"/>
                                 <exclude reference="gVd-Mm-2BH"/>
                                 <exclude reference="zeQ-fT-cl5"/>
-                                <exclude reference="t0h-cD-AT0"/>
                                 <exclude reference="zB8-HU-zrG"/>
+                                <exclude reference="t0h-cD-AT0"/>
+                                <exclude reference="OyQ-J3-amH"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
                             <mask key="subviews">
                                 <include reference="NVG-dr-7c2"/>
                                 <include reference="4Uz-xC-98E"/>
-                                <include reference="OyQ-J3-amH"/>
                                 <include reference="gVd-Mm-2BH"/>
                                 <include reference="zeQ-fT-cl5"/>
-                                <include reference="t0h-cD-AT0"/>
                                 <include reference="zB8-HU-zrG"/>
+                                <include reference="t0h-cD-AT0"/>
+                                <include reference="OyQ-J3-amH"/>
                             </mask>
                         </variation>
                         <connections>
@@ -423,13 +423,13 @@
         <!--Promos from category-->
         <scene sceneID="VJH-iF-ye6">
             <objects>
-                <viewController restorationIdentifier="promosInCategoryView" title="Promos from category" id="UT2-Ka-tiN" customClass="ViewPromosFromCategoryController" sceneMemberID="viewController">
+                <viewController restorationIdentifier="promosInCategoryView" storyboardIdentifier="PromosFromCategoryNib" title="Promos from category" id="UT2-Ka-tiN" customClass="ViewPromosFromCategoryController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="ned-44-0nG"/>
                         <viewControllerLayoutGuide type="bottom" id="0KP-RE-N5k"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="xQ4-6v-wQN">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Swipe up to go back" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CjJ-12-IuO">
@@ -447,6 +447,15 @@
                                     <rect key="frame" x="-53" y="156" width="400" height="162"/>
                                 </variation>
                             </pickerView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Promos from the category" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="e2D-y0-mgw">
+                                <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <color key="textColor" red="0.0" green="0.25098040699958801" blue="0.50196081399917603" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="-5" y="44" width="305" height="44"/>
+                                </variation>
+                            </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DxH-QS-8rl">
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
@@ -457,18 +466,10 @@
                                     <rect key="frame" x="32" y="429" width="213" height="30"/>
                                 </variation>
                                 <connections>
-                                    <segue destination="eHx-yF-yry" kind="modal" id="LP0-xc-Za1"/>
+                                    <action selector="showSinglePromo:" destination="UT2-Ka-tiN" eventType="touchUpInside" id="Kpb-ck-QYe"/>
+                                    <segue destination="eHx-yF-yry" kind="modal" id="QpA-ny-Veu"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Promos from the category" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="e2D-y0-mgw">
-                                <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
-                                <color key="textColor" red="0.0" green="0.25098040699958801" blue="0.50196081399917603" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                                <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="-5" y="44" width="305" height="44"/>
-                                </variation>
-                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <gestureRecognizers/>
@@ -476,22 +477,25 @@
                             <mask key="subviews">
                                 <exclude reference="CjJ-12-IuO"/>
                                 <exclude reference="UXR-x1-JPu"/>
-                                <exclude reference="DxH-QS-8rl"/>
                                 <exclude reference="e2D-y0-mgw"/>
+                                <exclude reference="DxH-QS-8rl"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
                             <mask key="subviews">
                                 <include reference="CjJ-12-IuO"/>
                                 <include reference="UXR-x1-JPu"/>
-                                <include reference="DxH-QS-8rl"/>
                                 <include reference="e2D-y0-mgw"/>
+                                <include reference="DxH-QS-8rl"/>
                             </mask>
                         </variation>
                         <connections>
                             <outletCollection property="gestureRecognizers" destination="lnU-Xk-o4d" appends="YES" id="MEj-pm-Jnl"/>
                         </connections>
                     </view>
+                    <connections>
+                        <outlet property="picker" destination="UXR-x1-JPu" id="jIL-eZ-fza"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eLw-EJ-XjB" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="cZN-kj-Jy7" userLabel="Exit" sceneMemberID="exit"/>
@@ -506,13 +510,13 @@
         <!--Single Promo-->
         <scene sceneID="gRJ-r4-zJN">
             <objects>
-                <viewController restorationIdentifier="singlePromoView" title="Single Promo" id="eHx-yF-yry" customClass="ViewSinglePromoController" sceneMemberID="viewController">
+                <viewController restorationIdentifier="singlePromoView" storyboardIdentifier="SinglePromoNib" title="Single Promo" id="eHx-yF-yry" customClass="ViewSinglePromoController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="VdU-Bu-evi"/>
                         <viewControllerLayoutGuide type="bottom" id="vCr-lV-ajZ"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="MKp-dB-f0B">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tap double given address  to" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Otd-FQ-hBm">
@@ -551,15 +555,6 @@
                                     <rect key="frame" x="16" y="72" width="111" height="21"/>
                                 </variation>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" restorationIdentifier="nameLabel" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8ws-pb-644">
-                                <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                                <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="165" y="72" width="140" height="21"/>
-                                </variation>
-                            </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Category:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ENg-iX-vHg">
                                 <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="19"/>
@@ -567,15 +562,6 @@
                                 <nil key="highlightedColor"/>
                                 <variation key="widthClass=compact" fixedFrame="YES">
                                     <rect key="frame" x="16" y="115" width="112" height="21"/>
-                                </variation>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" restorationIdentifier="categoryLabel" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pr2-ot-QlV">
-                                <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                                <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="165" y="115" width="124" height="21"/>
                                 </variation>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Price:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pFV-Ji-s5v">
@@ -596,13 +582,13 @@
                                     <rect key="frame" x="165" y="154" width="145" height="21"/>
                                 </variation>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="In promo until:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="K16-yQ-yPs">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="More info:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="K16-yQ-yPs">
                                 <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="19"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.50196081399917603" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                                 <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="16" y="193" width="141" height="21"/>
+                                    <rect key="frame" x="16" y="193" width="141" height="23"/>
                                 </variation>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" restorationIdentifier="dateLabel" text="No info" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4n3-v8-GNv">
@@ -620,21 +606,8 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.50196081399917603" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                                 <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="16" y="233" width="141" height="21"/>
+                                    <rect key="frame" x="16" y="235" width="141" height="21"/>
                                 </variation>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" restorationIdentifier="addressLabel" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jgu-Mn-NYe">
-                                <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
-                                <gestureRecognizers/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                                <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="165" y="235" width="140" height="21"/>
-                                </variation>
-                                <connections>
-                                    <outletCollection property="gestureRecognizers" destination="OME-I4-TmP" appends="YES" id="dBo-ez-Vl6"/>
-                                </connections>
                             </label>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="8iu-TD-72C">
                                 <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
@@ -678,6 +651,34 @@
                                     <rect key="frame" x="37" y="543" width="175" height="21"/>
                                 </variation>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" restorationIdentifier="addressLabel" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jgu-Mn-NYe">
+                                <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
+                                <gestureRecognizers/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="165" y="235" width="140" height="21"/>
+                                </variation>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="q2g-Ps-VPr">
+                                <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="165" y="109" width="42" height="21"/>
+                                </variation>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" restorationIdentifier="nameLabel" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8ws-pb-644">
+                                <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="165" y="72" width="140" height="21"/>
+                                </variation>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <gestureRecognizers/>
@@ -687,20 +688,20 @@
                                 <exclude reference="zIu-zU-6yf"/>
                                 <exclude reference="eN7-N3-4ca"/>
                                 <exclude reference="Wun-zo-lQw"/>
-                                <exclude reference="8ws-pb-644"/>
                                 <exclude reference="ENg-iX-vHg"/>
-                                <exclude reference="Pr2-ot-QlV"/>
                                 <exclude reference="pFV-Ji-s5v"/>
                                 <exclude reference="kkW-H0-uxX"/>
                                 <exclude reference="K16-yQ-yPs"/>
                                 <exclude reference="4n3-v8-GNv"/>
                                 <exclude reference="IDH-4Z-EFl"/>
-                                <exclude reference="Jgu-Mn-NYe"/>
                                 <exclude reference="8iu-TD-72C"/>
                                 <exclude reference="p1y-b1-7gg"/>
                                 <exclude reference="R8N-U3-Zcc"/>
                                 <exclude reference="OUM-0o-4tt"/>
                                 <exclude reference="qLq-vT-7BX"/>
+                                <exclude reference="Jgu-Mn-NYe"/>
+                                <exclude reference="q2g-Ps-VPr"/>
+                                <exclude reference="8ws-pb-644"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
@@ -709,20 +710,20 @@
                                 <include reference="zIu-zU-6yf"/>
                                 <include reference="eN7-N3-4ca"/>
                                 <include reference="Wun-zo-lQw"/>
-                                <include reference="8ws-pb-644"/>
                                 <include reference="ENg-iX-vHg"/>
-                                <include reference="Pr2-ot-QlV"/>
                                 <include reference="pFV-Ji-s5v"/>
                                 <include reference="kkW-H0-uxX"/>
                                 <include reference="K16-yQ-yPs"/>
                                 <include reference="4n3-v8-GNv"/>
                                 <include reference="IDH-4Z-EFl"/>
-                                <include reference="Jgu-Mn-NYe"/>
                                 <include reference="8iu-TD-72C"/>
                                 <include reference="p1y-b1-7gg"/>
                                 <include reference="R8N-U3-Zcc"/>
                                 <include reference="OUM-0o-4tt"/>
                                 <include reference="qLq-vT-7BX"/>
+                                <include reference="Jgu-Mn-NYe"/>
+                                <include reference="q2g-Ps-VPr"/>
+                                <include reference="8ws-pb-644"/>
                             </mask>
                         </variation>
                         <connections>
@@ -751,7 +752,7 @@
                     </connections>
                 </swipeGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="-3291.75" y="-361.5"/>
+            <point key="canvasLocation" x="-3294" y="-361"/>
         </scene>
     </scenes>
     <resources>

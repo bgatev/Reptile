@@ -10,17 +10,35 @@
 
 @interface ViewSinglePromoController ()
 
+
 @end
 
 @implementation ViewSinglePromoController
 
 - (void)viewDidLoad {
-    
-    self.view.backgroundColor=[UIColor colorWithPatternImage:[UIImage imageNamed:@"17.1.jpg"]];
-    
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
-}
+
+    self.view.backgroundColor=[UIColor colorWithPatternImage:[UIImage imageNamed:@"17.1.jpg"]];
+
+    
+    for (id promo in _promosFromTheCategorySingle) {
+        if (promo[@"Name"]== _singleNameInView) {
+            
+           // set info
+
+                 NSLog(@"PROMO NAME  %@  !!!", promo[@"Name"]);
+            break;
+        }
+    }
+    
+
+    
+       // Do any additional setup after loading the view.
+    
+    }
+
+
+
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
