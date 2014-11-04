@@ -94,11 +94,13 @@
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NVG-dr-7c2">
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
-                                <state key="normal" title="(delete when implement the gesture)">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                                <state key="normal" title="Show All Promos" backgroundImage="9.jpg">
+                                    <color key="titleColor" red="1" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" red="0.25098040699958801" green="0.50196081399917603" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="-14" y="445" width="344" height="30"/>
+                                    <rect key="frame" x="16" y="398" width="241" height="40"/>
                                 </variation>
                                 <connections>
                                     <segue destination="UT2-Ka-tiN" kind="modal" modalTransitionStyle="crossDissolve" id="DvD-hG-rPc"/>
@@ -110,39 +112,15 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.50196081399917603" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                                 <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="31" y="381" width="227" height="21"/>
+                                    <rect key="frame" x="19" y="328" width="227" height="21"/>
                                 </variation>
                             </label>
                             <pickerView contentMode="scaleToFill" restorationIdentifier="chosenCategory" translatesAutoresizingMaskIntoConstraints="NO" id="OyQ-J3-amH">
                                 <rect key="frame" x="0.0" y="-162" width="320" height="162"/>
                                 <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="-21" y="93" width="375" height="180"/>
+                                    <rect key="frame" x="-65" y="111" width="394" height="180"/>
                                 </variation>
                             </pickerView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="from the chosen category" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zeQ-fT-cl5">
-                                <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.50196081399917603" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                                <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="68" y="416" width="220" height="21"/>
-                                </variation>
-                                <variation key="heightClass=compact-widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="65" y="410" width="220" height="21"/>
-                                </variation>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Swipe up to go back" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zB8-HU-zrG">
-                                <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.50196081399917603" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                                <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="19" y="456" width="295" height="136"/>
-                                </variation>
-                                <variation key="heightClass=compact-widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="51" y="455" width="295" height="136"/>
-                                </variation>
-                            </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Choose category:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gVd-Mm-2BH">
                                 <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="28"/>
@@ -150,6 +128,41 @@
                                 <nil key="highlightedColor"/>
                                 <variation key="widthClass=compact" fixedFrame="YES">
                                     <rect key="frame" x="50" y="45" width="309" height="32"/>
+                                </variation>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="from the chosen category" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zeQ-fT-cl5">
+                                <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.50196081399917603" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="56" y="357" width="220" height="21"/>
+                                </variation>
+                                <variation key="heightClass=compact-widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="65" y="410" width="220" height="21"/>
+                                </variation>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="t0h-cD-AT0">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                                <state key="normal" title="Show only my promos" backgroundImage="9.jpg">
+                                    <color key="titleColor" red="1" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" red="0.0" green="0.50196081399917603" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="16" y="456" width="241" height="40"/>
+                                </variation>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Swipe up to go back" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zB8-HU-zrG">
+                                <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.50196081399917603" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="16" y="477" width="295" height="136"/>
+                                </variation>
+                                <variation key="heightClass=compact-widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="51" y="455" width="295" height="136"/>
                                 </variation>
                             </label>
                         </subviews>
@@ -160,9 +173,10 @@
                                 <exclude reference="NVG-dr-7c2"/>
                                 <exclude reference="4Uz-xC-98E"/>
                                 <exclude reference="OyQ-J3-amH"/>
-                                <exclude reference="zeQ-fT-cl5"/>
-                                <exclude reference="zB8-HU-zrG"/>
                                 <exclude reference="gVd-Mm-2BH"/>
+                                <exclude reference="zeQ-fT-cl5"/>
+                                <exclude reference="t0h-cD-AT0"/>
+                                <exclude reference="zB8-HU-zrG"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
@@ -170,9 +184,10 @@
                                 <include reference="NVG-dr-7c2"/>
                                 <include reference="4Uz-xC-98E"/>
                                 <include reference="OyQ-J3-amH"/>
-                                <include reference="zeQ-fT-cl5"/>
-                                <include reference="zB8-HU-zrG"/>
                                 <include reference="gVd-Mm-2BH"/>
+                                <include reference="zeQ-fT-cl5"/>
+                                <include reference="t0h-cD-AT0"/>
+                                <include reference="zB8-HU-zrG"/>
                             </mask>
                         </variation>
                         <connections>
@@ -192,7 +207,7 @@
                     </connections>
                 </swipeGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="-1877.25" y="-360.75"/>
+            <point key="canvasLocation" x="-1877.25" y="-369.5"/>
         </scene>
         <!--Add Promo-->
         <scene sceneID="eIP-km-Y7L">
@@ -278,6 +293,14 @@
                                     <rect key="frame" x="35" y="190" width="52" height="21"/>
                                 </variation>
                             </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="addAddressInput" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Add shop address" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="B3O-NR-upa">
+                                <rect key="frame" x="0.0" y="-30" width="97" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="150" y="181" width="159" height="30"/>
+                                </variation>
+                            </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Category*:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oVO-gx-OkA">
                                 <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -299,23 +322,6 @@
                                     <rect key="frame" x="7" y="580" width="196" height="21"/>
                                 </variation>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" restorationIdentifier="createButton" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jfw-Ew-ssm">
-                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
-                                <state key="normal" title="Create" backgroundImage="9.jpg">
-                                    <color key="titleColor" red="0.80000001192092896" green="1" blue="0.40000000596046448" alpha="1" colorSpace="calibratedRGB"/>
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="30" y="454" width="195" height="46"/>
-                                </variation>
-                                <variation key="heightClass=compact-widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="89" y="469" width="197" height="44"/>
-                                </variation>
-                                <connections>
-                                    <action selector="createPromo:" destination="dZn-nd-seR" eventType="touchUpInside" id="jRq-nS-9yj"/>
-                                </connections>
-                            </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Swipe up to go back" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9q0-eV-iKH">
                                 <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -334,14 +340,23 @@
                                     <rect key="frame" x="-60" y="253" width="375" height="162"/>
                                 </variation>
                             </pickerView>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="addAddressInput" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Add shop address" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="B3O-NR-upa">
-                                <rect key="frame" x="0.0" y="-30" width="97" height="30"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                            <button opaque="NO" contentMode="scaleToFill" restorationIdentifier="createButton" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jfw-Ew-ssm">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <state key="normal" title="Create" backgroundImage="9.jpg">
+                                    <color key="titleColor" red="0.80000001192092896" green="1" blue="0.40000000596046448" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
                                 <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="150" y="181" width="159" height="30"/>
+                                    <rect key="frame" x="30" y="454" width="195" height="46"/>
                                 </variation>
-                            </textField>
+                                <variation key="heightClass=compact-widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="89" y="469" width="197" height="44"/>
+                                </variation>
+                                <connections>
+                                    <action selector="createPromo:" destination="dZn-nd-seR" eventType="touchUpInside" id="jRq-nS-9yj"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <gestureRecognizers/>
@@ -355,12 +370,12 @@
                                 <exclude reference="bkf-Ic-u4G"/>
                                 <exclude reference="cKE-PH-TMy"/>
                                 <exclude reference="kNX-wg-MDD"/>
+                                <exclude reference="B3O-NR-upa"/>
                                 <exclude reference="oVO-gx-OkA"/>
                                 <exclude reference="bbE-DT-x25"/>
-                                <exclude reference="Jfw-Ew-ssm"/>
                                 <exclude reference="9q0-eV-iKH"/>
                                 <exclude reference="ejy-4J-sf4"/>
-                                <exclude reference="B3O-NR-upa"/>
+                                <exclude reference="Jfw-Ew-ssm"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
@@ -373,12 +388,12 @@
                                 <include reference="bkf-Ic-u4G"/>
                                 <include reference="cKE-PH-TMy"/>
                                 <include reference="kNX-wg-MDD"/>
+                                <include reference="B3O-NR-upa"/>
                                 <include reference="oVO-gx-OkA"/>
                                 <include reference="bbE-DT-x25"/>
-                                <include reference="Jfw-Ew-ssm"/>
                                 <include reference="9q0-eV-iKH"/>
                                 <include reference="ejy-4J-sf4"/>
-                                <include reference="B3O-NR-upa"/>
+                                <include reference="Jfw-Ew-ssm"/>
                             </mask>
                         </variation>
                         <connections>
@@ -417,15 +432,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Promos from the category" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="e2D-y0-mgw">
-                                <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="23"/>
-                                <color key="textColor" red="0.0" green="0.25098040699958801" blue="0.50196081399917603" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                                <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="-5" y="44" width="305" height="21"/>
-                                </variation>
-                            </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Swipe up to go back" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CjJ-12-IuO">
                                 <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -435,6 +441,12 @@
                                     <rect key="frame" x="66" y="504" width="159" height="21"/>
                                 </variation>
                             </label>
+                            <pickerView contentMode="scaleToFill" restorationIdentifier="chosenPromo" translatesAutoresizingMaskIntoConstraints="NO" id="UXR-x1-JPu">
+                                <rect key="frame" x="0.0" y="-162" width="320" height="162"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="-53" y="156" width="400" height="162"/>
+                                </variation>
+                            </pickerView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DxH-QS-8rl">
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
@@ -448,40 +460,32 @@
                                     <segue destination="eHx-yF-yry" kind="modal" id="LP0-xc-Za1"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7CO-3B-1Ht">
-                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
-                                <state key="normal" title="SHOW MY PROMOS">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Promos from the category" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="e2D-y0-mgw">
+                                <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <color key="textColor" red="0.0" green="0.25098040699958801" blue="0.50196081399917603" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
                                 <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="32" y="89" width="145" height="30"/>
+                                    <rect key="frame" x="-5" y="44" width="305" height="44"/>
                                 </variation>
-                            </button>
-                            <pickerView contentMode="scaleToFill" restorationIdentifier="chosenPromo" translatesAutoresizingMaskIntoConstraints="NO" id="UXR-x1-JPu">
-                                <rect key="frame" x="0.0" y="-162" width="320" height="162"/>
-                                <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="-53" y="184" width="400" height="162"/>
-                                </variation>
-                            </pickerView>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <gestureRecognizers/>
                         <variation key="default">
                             <mask key="subviews">
-                                <exclude reference="e2D-y0-mgw"/>
                                 <exclude reference="CjJ-12-IuO"/>
-                                <exclude reference="DxH-QS-8rl"/>
-                                <exclude reference="7CO-3B-1Ht"/>
                                 <exclude reference="UXR-x1-JPu"/>
+                                <exclude reference="DxH-QS-8rl"/>
+                                <exclude reference="e2D-y0-mgw"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
                             <mask key="subviews">
-                                <include reference="e2D-y0-mgw"/>
                                 <include reference="CjJ-12-IuO"/>
-                                <include reference="DxH-QS-8rl"/>
-                                <include reference="7CO-3B-1Ht"/>
                                 <include reference="UXR-x1-JPu"/>
+                                <include reference="DxH-QS-8rl"/>
+                                <include reference="e2D-y0-mgw"/>
                             </mask>
                         </variation>
                         <connections>
