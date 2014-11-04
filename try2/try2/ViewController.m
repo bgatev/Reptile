@@ -7,6 +7,7 @@
 //
 
 #import "ViewController.h"
+#import <Parse/Parse.h>
 
 @interface ViewController ()
 
@@ -16,7 +17,10 @@
 
 - (void)viewDidLoad {
   self.view.backgroundColor=[UIColor colorWithPatternImage:[UIImage imageNamed:@"13.3.jpg"]];
-
+    
+    PFObject *testObject = [PFObject objectWithClassName:@"Promotions"];
+    testObject[@"City"] = @"Sofia";
+    [testObject saveInBackground];
     
     
     [super viewDidLoad];
