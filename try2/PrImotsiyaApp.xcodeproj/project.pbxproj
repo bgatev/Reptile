@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		2306FFB91A001E2400722200 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2306FFB81A001E2400722200 /* Default-568h@2x.png */; };
+		232740A21A0C1641008DC7AC /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 232740A11A0C1641008DC7AC /* Reachability.m */; };
 		842C453119FEBEDD00BB96A1 /* ViewCreatePromoController.m in Sources */ = {isa = PBXBuildFile; fileRef = 842C453019FEBEDD00BB96A1 /* ViewCreatePromoController.m */; };
 		842C453319FEC0F400BB96A1 /* 17.1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 842C453219FEC0F400BB96A1 /* 17.1.jpg */; };
 		842C453919FEDBF100BB96A1 /* ViewSinglePromoController.m in Sources */ = {isa = PBXBuildFile; fileRef = 842C453819FEDBF100BB96A1 /* ViewSinglePromoController.m */; };
@@ -58,6 +59,8 @@
 /* Begin PBXFileReference section */
 		0C025E4D6837A5C1464BDAE2 /* libPods-try2.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-try2.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2306FFB81A001E2400722200 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		232740A01A0C1641008DC7AC /* Reachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Reachability.h; sourceTree = "<group>"; };
+		232740A11A0C1641008DC7AC /* Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Reachability.m; sourceTree = "<group>"; };
 		7E766B374A5CE42718DE96F0 /* Pods-try2.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-try2.release.xcconfig"; path = "Pods/Target Support Files/Pods-try2/Pods-try2.release.xcconfig"; sourceTree = "<group>"; };
 		842C452F19FEBEDD00BB96A1 /* ViewCreatePromoController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ViewCreatePromoController.h; path = ../ViewCreatePromoController.h; sourceTree = "<group>"; };
 		842C453019FEBEDD00BB96A1 /* ViewCreatePromoController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ViewCreatePromoController.m; path = ../ViewCreatePromoController.m; sourceTree = "<group>"; };
@@ -191,6 +194,8 @@
 				84A9447119FE491000FB0A27 /* images */,
 				84AA3FF919FD9D840076A526 /* AppDelegate.h */,
 				84AA3FFA19FD9D840076A526 /* AppDelegate.m */,
+				232740A01A0C1641008DC7AC /* Reachability.h */,
+				232740A11A0C1641008DC7AC /* Reachability.m */,
 				84AA3FFC19FD9D840076A526 /* ViewController.h */,
 				84AA3FFD19FD9D840076A526 /* ViewController.m */,
 				84A8DACB19FEA0770049CAC4 /* ViewPromosController.h */,
@@ -411,6 +416,7 @@
 				84AA3FFE19FD9D840076A526 /* ViewController.m in Sources */,
 				84AA3FFB19FD9D840076A526 /* AppDelegate.m in Sources */,
 				84AA3FF819FD9D840076A526 /* main.m in Sources */,
+				232740A21A0C1641008DC7AC /* Reachability.m in Sources */,
 				842C453C19FEDECE00BB96A1 /* ViewPromosFromCategoryController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

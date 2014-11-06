@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import <AVFoundation/AVFoundation.h>
+#import "Reachability.h"
 
 @interface ViewController : UIViewController {
     IBOutlet UIButton *playPauseButton; //Toggles the playback state

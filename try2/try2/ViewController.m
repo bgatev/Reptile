@@ -112,6 +112,19 @@
     
     [super viewDidLoad];
     
+    //Check Connection example
+    Reachability *networkReachability = [Reachability reachabilityForInternetConnection];
+    NetworkStatus networkStatus = [networkReachability currentReachabilityStatus];
+    
+    if (networkStatus == NotReachable) {
+        //no internet
+        
+    } else {
+        // has internet
+        
+    }
+    
+    
     //Declare the audio file location and settup the player
     NSURL *audioFileLocationURL = [[NSBundle mainBundle] URLForResource:@"sound" withExtension:@"caf"];
 
