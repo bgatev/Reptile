@@ -31,6 +31,19 @@
     [self togglePlayPause];
 }
 
+-(void) dealloc {
+    self.playPauseButton = nil;
+    self.volumeControl = nil;
+    self.alertLabel = nil;
+    self.audioPlayer = nil;
+    
+    //[playPauseButton release];
+    //[volumeControl release];
+    //[alertLabel release];
+    //[audioPlayer release];
+    
+}
+
 - (void)viewDidAppear:(BOOL)animated {
     [super viewDidAppear:animated];
     
