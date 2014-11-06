@@ -439,10 +439,14 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <gestureRecognizers/>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="jP4-TM-rR8" appends="YES" id="pEj-IZ-Tik"/>
+                        </connections>
                     </view>
                     <navigationItem key="navigationItem" title="Title" id="3b3-zC-oxX"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="euZ-mo-HFo" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <pongPressGestureRecognizer allowableMovement="10" minimumPressDuration="0.5" id="jP4-TM-rR8"/>
             </objects>
             <point key="canvasLocation" x="370.5" y="-403"/>
         </scene>

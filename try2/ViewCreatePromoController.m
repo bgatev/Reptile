@@ -8,19 +8,20 @@
 
 #import "ViewCreatePromoController.h"
 #import <Parse/Parse.h>
+#import <GoogleMaps/GoogleMaps.h>
 
 @interface ViewCreatePromoController ()
 {
-     NSArray *_pickerData;
-      CLLocationManager *locationManager;
+    NSArray *_pickerData;
+    CLLocationManager *locationManager;
 }
 @end
 
 @implementation ViewCreatePromoController
 
 - (void)viewDidLoad {
-   
-        self.view.backgroundColor=[UIColor colorWithPatternImage:[UIImage imageNamed:@"17.1.jpg"]];
+    
+    self.view.backgroundColor=[UIColor colorWithPatternImage:[UIImage imageNamed:@"17.1.jpg"]];
     
     [super viewDidLoad];
     
@@ -31,15 +32,7 @@
     self.picker.dataSource = self;
     self.picker.delegate = self;
     
-    //location
-     locationManager = [[CLLocationManager alloc] init];
-    
-    
-    locationManager.delegate = self;
-    locationManager.desiredAccuracy = kCLLocationAccuracyBest;
-    
-    [locationManager startUpdatingLocation];
-    // Do any additional setup after loading the view.
+
 }
 
 - (void)didReceiveMemoryWarning {
@@ -68,10 +61,10 @@
 
 
 - (IBAction)createPromo:(id)sender{
-   // NSString *strPrintRepeat;
+    // NSString *strPrintRepeat;
     NSInteger row;
-  //  NSArray *repeatPickerData;
-   // UIPickerView *repeatPickerView;
+    //  NSArray *repeatPickerData;
+    // UIPickerView *repeatPickerView;
     
     row = [_picker selectedRowInComponent:0];
     self.strPrintRepeat = [_pickerData objectAtIndex:row];
@@ -80,8 +73,11 @@
     NSString *name = _nameInput.text;
     NSString *info = _moreInfoInput.text;
     NSString *category = self.strPrintRepeat;
-     double price = _priceInput.text.doubleValue;
+    double price = _priceInput.text.doubleValue;
     NSNumber *priceNumber = [NSNumber numberWithDouble:price];
+    PFGeoPoint *point = [[PFGeoPoint alloc]init];
+    point.latitude = 40;
+    point.longitude = 150;
     
     //Validate input info
     if(name == nil || name.length <=3 || name.length>=30){
@@ -89,69 +85,53 @@
         [alert show];
         _nameInput.text = @"";
     }
-   else if(price <= 0){
+    else if(price <= 0){
         UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Invalid price." message:@"It should be a positive number." delegate:self cancelButtonTitle:@"Ok" otherButtonTitles:nil,nil];
         [alert show];
-       _priceInput.text = @"";
+        _priceInput.text = @"";
     }
-  else
+    else
     {
+        [PFGeoPoint geoPointForCurrentLocationInBackground:^(PFGeoPoint *geoPoint, NSError *error) {
+            if (!error) {
+                NSLog(@"Cannot take current location");
+            }
+            point.latitude = geoPoint.latitude;
+            point.longitude = geoPoint.longitude;
+           
+        }];
+        
         //add in database
-      PFObject *newPromo = [PFObject objectWithClassName:@"Promotion"];
-     newPromo[@"Name"] = name;
-       newPromo[@"Category"] = category;
-       newPromo[@"Price"] = priceNumber;
-       newPromo[@"MoreInfo"] = info;
-     //   newPromo[@"Picture"] = @"17.1.jpg";
-    // newPromo[@"Shop"] = geo;
+        PFObject *newPromo = [PFObject objectWithClassName:@"Promotion"];
+        newPromo[@"Name"] = name;
+        newPromo[@"Category"] = category;
+        newPromo[@"Price"] = priceNumber;
+        newPromo[@"MoreInfo"] = info;
+        newPromo[@"Shop"]= point;
+       // NSData *imageData = UIImagePNGRepresentation(image);
+       // PFFile *imageFile = [PFFile fileWithName:@"17.1.jpg" data:imageData];
+       //  newPromo[@"Picture"]= imageFile;
         
-      [newPromo saveInBackground];
-    
-    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Your promotion is added successfully!" message:nil delegate:self cancelButtonTitle:@"Ok" otherButtonTitles:nil,nil];
-    [alert show];
+       
+        
+        [newPromo saveInBackground];
+        
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Your promotion is added successfully!" message:nil delegate:self cancelButtonTitle:@"Ok" otherButtonTitles:nil,nil];
+        [alert show];
     }
 }
 
 
-
-//location methods
-#pragma mark - CLLocationManagerDelegate
-
-- (void)locationManager:(CLLocationManager *)manager didFailWithError:(NSError *)error
-{
-    NSLog(@"didFailWithError: %@", error);
-    UIAlertView *errorAlert = [[UIAlertView alloc]
-                               initWithTitle:@"Error" message:@"Failed to Get Your Location" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
-    [errorAlert show];
-}
-
-- (void)locationManager:(CLLocationManager *)manager didUpdateToLocation:(CLLocation *)newLocation fromLocation:(CLLocation *)oldLocation
-{
-    NSLog(@"didUpdateToLocation: %@", newLocation);
-    CLLocation *currentLocation = newLocation;
-    
-    if (currentLocation != nil) {
-        
-        UIAlertView *errorAlert = [[UIAlertView alloc]
-                                   initWithTitle:[NSString stringWithFormat:@"%.8f", currentLocation.coordinate.longitude] message:[NSString stringWithFormat:@"%.8f", currentLocation.coordinate.latitude] delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
-        
-  //      NSLog([NSString stringWithFormat:@"%.8f", currentLocation.coordinate.longitude]);
-   //     NSLog([NSString stringWithFormat:@"%.8f", currentLocation.coordinate.latitude])	;
-        
-        //longitudeLabel.text = [NSString stringWithFormat:@"%.8f", currentLocation.coordinate.longitude];
-       // latitudeLabel.text = [NSString stringWithFormat:@"%.8f", currentLocation.coordinate.latitude];
-    }
-}
 
 /*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
+ #pragma mark - Navigation
+ 
+ // In a storyboard-based application, you will often want to do a little preparation before navigation
+ - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+ // Get the new view controller using [segue destinationViewController].
+ // Pass the selected object to the new view controller.
+ }
+ */
 
 
 

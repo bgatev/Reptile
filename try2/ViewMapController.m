@@ -37,6 +37,8 @@
     // Do any additional setup after loading the view.
     
     self.view = mapView;
+    
+
 }
 
 - (void)didReceiveMemoryWarning {
@@ -46,7 +48,17 @@
 
 
 
+- (void)mapView:(GMSMapView *)mapView didLongPressAtCoordinate:(CLLocationCoordinate2D)coordinate
 
+{
+    GMSMarker *marker3 = [[GMSMarker alloc] init];
+    marker3.position = coordinate;
+    marker3.title = @"170 Asbury Anderson Rd";
+    marker3.snippet = @"US";
+    marker3.map = mapView;
+    
+    NSLog(@"Added");
+}
 
 
 /*

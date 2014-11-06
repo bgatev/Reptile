@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import <CoreLocation/CoreLocation.h>
+#import <GoogleMaps/GoogleMaps.h>
 
 @interface ViewCreatePromoController : UIViewController<UIPickerViewDataSource, UIPickerViewDelegate,CLLocationManagerDelegate>
 
@@ -25,11 +26,11 @@
 @property (weak, nonatomic) NSString* strPrintRepeat;
 
 
-@property (weak, nonatomic) IBOutlet UILabel *latitudeLabel;
+//@property (weak, nonatomic) IBOutlet UILabel *latitudeLabel;
 
-@property (weak, nonatomic) IBOutlet UILabel *longitudeLabel;
+//@property (weak, nonatomic) IBOutlet UILabel *longitudeLabel;
 
-@property (weak, nonatomic) IBOutlet UILabel *addressLabel;
+//@property (weak, nonatomic) IBOutlet UILabel *addressLabel;
 
 
 // add geo point

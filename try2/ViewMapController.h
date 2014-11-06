@@ -8,11 +8,11 @@
 
 #import <UIKit/UIKit.h>
 #import <CoreLocation/CoreLocation.h>
+#import <GoogleMaps/GoogleMaps.h>
 
-@interface ViewMapController : UIViewController<CLLocationManagerDelegate>
-{
-    CLLocationManager *locationManager;
-    CLLocation *currentLocation;
-}
+@interface ViewMapController : UIViewController<CLLocationManagerDelegate,GMSMapViewDelegate>
+
+
+//- (void)handleLongPressGesture:(UILongPressGestureRecognizer *)gesture;
 
 @end
