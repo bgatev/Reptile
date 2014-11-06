@@ -12,6 +12,7 @@
 @interface ViewCreatePromoController ()
 {
      NSArray *_pickerData;
+      CLLocationManager *locationManager;
 }
 @end
 
@@ -30,7 +31,14 @@
     self.picker.dataSource = self;
     self.picker.delegate = self;
     
+    //location
+     locationManager = [[CLLocationManager alloc] init];
     
+    
+    locationManager.delegate = self;
+    locationManager.desiredAccuracy = kCLLocationAccuracyBest;
+    
+    [locationManager startUpdatingLocation];
     // Do any additional setup after loading the view.
 }
 
@@ -104,6 +112,36 @@
     }
 }
 
+
+
+//location methods
+#pragma mark - CLLocationManagerDelegate
+
+- (void)locationManager:(CLLocationManager *)manager didFailWithError:(NSError *)error
+{
+    NSLog(@"didFailWithError: %@", error);
+    UIAlertView *errorAlert = [[UIAlertView alloc]
+                               initWithTitle:@"Error" message:@"Failed to Get Your Location" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
+    [errorAlert show];
+}
+
+- (void)locationManager:(CLLocationManager *)manager didUpdateToLocation:(CLLocation *)newLocation fromLocation:(CLLocation *)oldLocation
+{
+    NSLog(@"didUpdateToLocation: %@", newLocation);
+    CLLocation *currentLocation = newLocation;
+    
+    if (currentLocation != nil) {
+        
+        UIAlertView *errorAlert = [[UIAlertView alloc]
+                                   initWithTitle:[NSString stringWithFormat:@"%.8f", currentLocation.coordinate.longitude] message:[NSString stringWithFormat:@"%.8f", currentLocation.coordinate.latitude] delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
+        
+  //      NSLog([NSString stringWithFormat:@"%.8f", currentLocation.coordinate.longitude]);
+   //     NSLog([NSString stringWithFormat:@"%.8f", currentLocation.coordinate.latitude])	;
+        
+        //longitudeLabel.text = [NSString stringWithFormat:@"%.8f", currentLocation.coordinate.longitude];
+       // latitudeLabel.text = [NSString stringWithFormat:@"%.8f", currentLocation.coordinate.latitude];
+    }
+}
 
 /*
 #pragma mark - Navigation

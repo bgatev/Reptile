@@ -14,5 +14,7 @@
 
 - (IBAction)swipeBackRight:(UIStoryboardSegue *)otherSegue;
 
+- (IBAction)tapBackFromMap:(UIStoryboardSegue *)mapSegue;
+
 @end
 

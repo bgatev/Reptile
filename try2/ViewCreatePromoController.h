@@ -7,8 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <CoreLocation/CoreLocation.h>
 
-@interface ViewCreatePromoController : UIViewController<UIPickerViewDataSource, UIPickerViewDelegate>
+@interface ViewCreatePromoController : UIViewController<UIPickerViewDataSource, UIPickerViewDelegate,CLLocationManagerDelegate>
 
 @property (weak, nonatomic) IBOutlet UIPickerView *picker;
 
@@ -22,6 +23,14 @@
 - (IBAction)createPromo:(id)sender;
 
 @property (weak, nonatomic) NSString* strPrintRepeat;
+
+
+@property (weak, nonatomic) IBOutlet UILabel *latitudeLabel;
+
+@property (weak, nonatomic) IBOutlet UILabel *longitudeLabel;
+
+@property (weak, nonatomic) IBOutlet UILabel *addressLabel;
+
 
 // add geo point
 // add pic

@@ -293,14 +293,6 @@
                                     <rect key="frame" x="35" y="190" width="52" height="21"/>
                                 </variation>
                             </label>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="addAddressInput" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Add shop address" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="B3O-NR-upa">
-                                <rect key="frame" x="0.0" y="-30" width="97" height="30"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                                <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="150" y="181" width="159" height="30"/>
-                                </variation>
-                            </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Category*:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oVO-gx-OkA">
                                 <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -357,6 +349,15 @@
                                     <action selector="createPromo:" destination="dZn-nd-seR" eventType="touchUpInside" id="jRq-nS-9yj"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tap Double to go to map " lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gOL-pY-we2">
+                                <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.50196081399917603" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="136" y="189" width="208" height="21"/>
+                                </variation>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <gestureRecognizers/>
@@ -370,12 +371,12 @@
                                 <exclude reference="bkf-Ic-u4G"/>
                                 <exclude reference="cKE-PH-TMy"/>
                                 <exclude reference="kNX-wg-MDD"/>
-                                <exclude reference="B3O-NR-upa"/>
                                 <exclude reference="oVO-gx-OkA"/>
                                 <exclude reference="bbE-DT-x25"/>
                                 <exclude reference="9q0-eV-iKH"/>
                                 <exclude reference="ejy-4J-sf4"/>
                                 <exclude reference="Jfw-Ew-ssm"/>
+                                <exclude reference="gOL-pY-we2"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
@@ -388,17 +389,18 @@
                                 <include reference="bkf-Ic-u4G"/>
                                 <include reference="cKE-PH-TMy"/>
                                 <include reference="kNX-wg-MDD"/>
-                                <include reference="B3O-NR-upa"/>
                                 <include reference="oVO-gx-OkA"/>
                                 <include reference="bbE-DT-x25"/>
                                 <include reference="9q0-eV-iKH"/>
                                 <include reference="ejy-4J-sf4"/>
                                 <include reference="Jfw-Ew-ssm"/>
+                                <include reference="gOL-pY-we2"/>
                             </mask>
                         </variation>
                         <connections>
                             <outletCollection property="gestureRecognizers" destination="Aue-hS-ic5" appends="YES" id="rhY-mS-PrL"/>
                             <outletCollection property="gestureRecognizers" destination="cLn-3n-5JP" appends="YES" id="3se-yd-ae3"/>
+                            <outletCollection property="gestureRecognizers" destination="ZyS-Bs-xU5" appends="YES" id="I3B-ku-qE5"/>
                         </connections>
                     </view>
                     <connections>
@@ -406,7 +408,6 @@
                         <outlet property="nameInput" destination="Hdo-04-rIE" id="JUL-dR-n3R"/>
                         <outlet property="picker" destination="ejy-4J-sf4" id="QqI-Zl-JnV"/>
                         <outlet property="priceInput" destination="cKE-PH-TMy" id="8lh-cw-QYx"/>
-                        <outlet property="shopInput" destination="B3O-NR-upa" id="h75-x4-Jdm"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VfR-iG-ymA" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -417,8 +418,33 @@
                     </connections>
                 </swipeGestureRecognizer>
                 <pongPressGestureRecognizer allowableMovement="10" minimumPressDuration="0.5" id="cLn-3n-5JP"/>
+                <tapGestureRecognizer numberOfTapsRequired="2" id="ZyS-Bs-xU5">
+                    <connections>
+                        <segue destination="Ypm-0K-czq" kind="show" id="jjs-og-GbU"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="-462.75" y="-361.5"/>
+            <point key="canvasLocation" x="-456.75" y="-352.5"/>
+        </scene>
+        <!--Map-->
+        <scene sceneID="A12-Uk-nWV">
+            <objects>
+                <viewController title="Map" id="Ypm-0K-czq" customClass="ViewMapController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="CUJ-Im-fcO"/>
+                        <viewControllerLayoutGuide type="bottom" id="ndG-6P-ItI"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="bt7-Yd-mwB">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <gestureRecognizers/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Title" id="3b3-zC-oxX"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="euZ-mo-HFo" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="370.5" y="-403"/>
         </scene>
         <!--Promos from category-->
         <scene sceneID="VJH-iF-ye6">
@@ -573,7 +599,7 @@
                                     <rect key="frame" x="16" y="154" width="95" height="21"/>
                                 </variation>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" restorationIdentifier="priceLabel" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kkW-H0-uxX">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kkW-H0-uxX">
                                 <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -591,7 +617,7 @@
                                     <rect key="frame" x="16" y="193" width="141" height="23"/>
                                 </variation>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" restorationIdentifier="dateLabel" text="No info" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4n3-v8-GNv">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="No info" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4n3-v8-GNv">
                                 <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -670,7 +696,7 @@
                                     <rect key="frame" x="165" y="109" width="42" height="21"/>
                                 </variation>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" restorationIdentifier="nameLabel" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8ws-pb-644">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8ws-pb-644">
                                 <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -732,6 +758,12 @@
                             <outletCollection property="gestureRecognizers" destination="zN6-UG-NFK" appends="YES" id="p6S-Dz-PDH"/>
                         </connections>
                     </view>
+                    <connections>
+                        <outlet property="categoryLabell" destination="q2g-Ps-VPr" id="czh-i6-Gxz"/>
+                        <outlet property="moreInfoLabell" destination="4n3-v8-GNv" id="VUw-oz-snj"/>
+                        <outlet property="nameLabell" destination="8ws-pb-644" id="ufr-Ib-Ets"/>
+                        <outlet property="priceLabell" destination="kkW-H0-uxX" id="P2r-PI-Z5n"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VtO-H1-IIM" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="bsX-MC-aa4" userLabel="Exit" sceneMemberID="exit"/>

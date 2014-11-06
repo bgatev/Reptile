@@ -107,7 +107,7 @@
     pfc.promosFromTheCategorySingle = [[NSArray alloc] init];
     pfc.promosFromTheCategorySingle = _promosFromTheCategory;
     pfc.singleNameInView = singleName;
- //  [self presentViewController:pfc animated:YES completion:nil];
+   [self presentViewController:pfc animated:YES completion:nil];
     
    
 }
