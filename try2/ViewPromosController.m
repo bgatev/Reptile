@@ -42,13 +42,13 @@
 }
 
 // The number of columns of data
-- (int)numberOfComponentsInPickerView:(UIPickerView *)pickerView
+- (NSInteger)numberOfComponentsInPickerView:(UIPickerView *)pickerView
 {
     return 1;
 }
 
 // The number of rows of data
-- (int)pickerView:(UIPickerView *)pickerView numberOfRowsInComponent:(NSInteger)component
+- (NSInteger)pickerView:(UIPickerView *)pickerView numberOfRowsInComponent:(NSInteger)component
 {
     return _pickerCategoriesData.count;
 }
@@ -76,7 +76,7 @@
 
 - (IBAction)showAllFromCategory:(id)sender {
     
-      NSString *strPrintRepeat;
+    //  NSString *strPrintRepeat;
       NSInteger row;
     
     
@@ -90,7 +90,7 @@
     [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
         if (!error) {
             // The find succeeded.
-            NSLog(@"Successfully retrieved %d scores.", objects.count);
+            NSLog(@"Successfully retrieved %lu scores.", (unsigned long)objects.count);
             
             allPromos = objects;
             

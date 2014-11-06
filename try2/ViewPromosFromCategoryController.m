@@ -23,8 +23,8 @@
     self.view.backgroundColor=[UIColor colorWithPatternImage:[UIImage imageNamed:@"13.3.jpg"]];
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    
-    NSLog(@"%@", [self.promosFromTheCategory componentsJoinedByString:@", "]);
+  
+  //  NSLog(@"%@", [self.promosFromTheCategory componentsJoinedByString:@", "]);
     
     for (id item in _promosFromTheCategory) {
        // NSLog(@"%@", item[@"Name"]);
@@ -55,13 +55,13 @@
 }
 
 // The number of columns of data
-- (int)numberOfComponentsInPickerView:(UIPickerView *)pickerView
+- (NSInteger)numberOfComponentsInPickerView:(UIPickerView *)pickerView
 {
     return 1;
 }
 
 // The number of rows of data
-- (int)pickerView:(UIPickerView *)pickerView numberOfRowsInComponent:(NSInteger)component
+- (NSInteger)pickerView:(UIPickerView *)pickerView numberOfRowsInComponent:(NSInteger)component
 {
     return _pickerData.count;
 }
@@ -107,7 +107,7 @@
     pfc.promosFromTheCategorySingle = [[NSArray alloc] init];
     pfc.promosFromTheCategorySingle = _promosFromTheCategory;
     pfc.singleNameInView = singleName;
-   [self presentViewController:pfc animated:YES completion:nil];
+ //  [self presentViewController:pfc animated:YES completion:nil];
     
    
 }

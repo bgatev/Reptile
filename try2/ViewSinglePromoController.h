@@ -11,6 +11,7 @@
 @interface ViewSinglePromoController : UIViewController
 
 @property NSArray *promosFromTheCategorySingle;
+
 @property NSString *singleNameInView;
 
 

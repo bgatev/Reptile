@@ -26,12 +26,16 @@
             
            // set info
 
-                 NSLog(@"PROMO NAME  %@  !!!", promo[@"Name"]);
+            NSLog(@"PROMO NAME  %@  !!!", promo[@"Name"]);
+            NSLog(@"PROMO Category  %@  !!!", promo[@"Category"]);
+            NSLog(@"PROMO more info  %@  !!!", promo[@"MoreInfo"]);
+            NSLog(@"PROMO NAME  %@  !!!", promo[@"Price"]);
+            
             break;
         }
     }
     
-
+    
     
        // Do any additional setup after loading the view.
     
