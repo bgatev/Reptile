@@ -8,12 +8,19 @@
 #import <Parse/Parse.h>
 #import "AppDelegate.h"
 #import <GoogleMaps/GoogleMaps.h>
+#import "ViewPromosController.h"
+#import <AVFoundation/AVFoundation.h>
+#include <AudioToolbox/AudioToolbox.h>
 
 @interface AppDelegate ()
 
 @end
 
 @implementation AppDelegate
+
+@synthesize window = _window;
+
+@synthesize myAudioPlayer;
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
@@ -24,6 +31,15 @@
     [PFAnalytics trackAppOpenedWithLaunchOptions:launchOptions];
     
     [GMSServices provideAPIKey:@"AIzaSyDOheUrLTIh6kh1OX9m6EV2BxdG5mtAVNQ"];
+    
+    
+    //start a background sound
+    NSString *soundFilePath = [[NSBundle mainBundle] pathForResource:@"ATC" ofType: @"mp3"];
+    NSURL *fileURL = [[NSURL alloc] initFileURLWithPath:soundFilePath ];
+    myAudioPlayer = [[AVAudioPlayer alloc] initWithContentsOfURL:fileURL error:nil];
+    myAudioPlayer.numberOfLoops = -1; //infinite loop
+    [myAudioPlayer play];
+
     
     return YES;
 }
@@ -50,6 +66,13 @@
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
 }
 
-
+//Accelerometer
+- (void)applicationDidFinishLaunching:(UIApplication *)application {
+    
+    application.applicationSupportsShakeToEdit = YES;
+    
+   // [window addSubview:viewController.view];
+    [self.window makeKeyAndVisible];
+}
 
 @end

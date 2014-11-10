@@ -9,6 +9,7 @@
 #import <UIKit/UIKit.h>
 #import <CoreLocation/CoreLocation.h>
 #import <GoogleMaps/GoogleMaps.h>
+#import <Parse/Parse.h>
 
 @interface ViewCreatePromoController : UIViewController<UIPickerViewDataSource, UIPickerViewDelegate,CLLocationManagerDelegate>
 
@@ -20,20 +21,14 @@
 
 @property (weak, nonatomic) IBOutlet UITextField *priceInput;
 
-@property (weak, nonatomic) IBOutlet UITextField *shopInput;
-- (IBAction)createPromo:(id)sender;
-
 @property (weak, nonatomic) NSString* strPrintRepeat;
 
+@property double longitudeCreate;
 
-//@property (weak, nonatomic) IBOutlet UILabel *latitudeLabel;
+@property double latitudeCreate;
 
-//@property (weak, nonatomic) IBOutlet UILabel *longitudeLabel;
+- (IBAction)createPromo:(id)sender;
 
-//@property (weak, nonatomic) IBOutlet UILabel *addressLabel;
-
-
-// add geo point
-// add pic
+//@property (strong, nonatomic) UILongPressGestureRecognizer *addPicture;
 
 @end

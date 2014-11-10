@@ -9,10 +9,14 @@
 #import <UIKit/UIKit.h>
 #import <CoreLocation/CoreLocation.h>
 #import <GoogleMaps/GoogleMaps.h>
+#import <Parse/Parse.h>
 
 @interface ViewMapController : UIViewController<CLLocationManagerDelegate,GMSMapViewDelegate>
 
+@property PFGeoPoint *pointMarker;
 
-//- (void)handleLongPressGesture:(UILongPressGestureRecognizer *)gesture;
+@property double latitudeAddress;
+
+@property double longitudeAddress;
 
 @end
